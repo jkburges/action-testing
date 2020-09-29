@@ -4,12 +4,12 @@ on:
   pull_request:
     types: [closed]
 
-    jobs:
-      build:
+jobs:
+  build:
 
-        runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-        steps:
-          - name: Pull request merged
-            if: github. **event**.pull_request.merged == true
-            run: echo merged
+    steps:
+      - name: Pull request merged
+        if: github. **event**.pull_request.merged == true
+        run: echo merged
