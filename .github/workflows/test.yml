@@ -6,10 +6,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
 
     steps:
       - name: Pull request merged
-        if: github.event.pull_request.merged == true
         run: echo merged
